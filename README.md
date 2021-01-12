@@ -12,3 +12,7 @@ I'm Using Pymc3 for Probabilistic Programming, Keras and Pytorch for RNN and XGb
 
 # PyTorch example
 ![main](/Screenshots/PyTorch.png)
+
+# XGBoost example
+![main](/Screenshots/XGBoost.png)
+![main](/Screenshots/Splits.png)
