@@ -6,3 +6,6 @@ I'm Using Pymc3 for Probabilistic Programming, Keras and Pytorch for RNN and XGb
 ![main](/Screenshots/Pymc3_1.png)
 
 ![main](/Screenshots/Pymc3_2.png)
+
+# LSTM Keras example
+![main](/Screenshots/Keras.png)
