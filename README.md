@@ -1,6 +1,6 @@
 # Advanced-Time-series-analysis
 Advance Time Series Analysis using Probabilistic Programming, Recurrent, LSTM, GRU Neural Networs and XGBboost Regression. The aim is to compare these methods.
-I'm Using Pymc3 for Probabilistic Programming, Keras LSTM, Pytorch RNN and XGboost.
+I'm Using pymc3 for Probabilistic Programming, Keras for LSTM models, Pytorch for RNN models and XGboost Regressor.
 
 # Pymc3 example
 ![main](/Screenshots/Pymc3_1.png)
