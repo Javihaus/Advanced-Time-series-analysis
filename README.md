@@ -10,7 +10,7 @@ I'm Using pymc3 for Probabilistic Programming (Gaussian Processes), Keras for LS
 # LSTM with Keras example
 ![main](/Screenshots/Keras.png)
 
-# RNN and GRU with pyyorch example
+# RNN and GRU with pytorch example
 ![main](/Screenshots/PyTorch.png)
 
 # XGBoostRegressor example
