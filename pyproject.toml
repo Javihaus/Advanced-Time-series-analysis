@@ -1,0 +1,166 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "advanced-time-series-analysis"
+version = "1.0.0"
+authors = [
+    {name = "Javier Marin", email = "javier@jmarin.info"},
+]
+description = "A comprehensive framework for comparing probabilistic programming, deep learning, and gradient boosting methods for time series forecasting"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+keywords = [
+    "time-series",
+    "forecasting", 
+    "machine-learning",
+    "deep-learning",
+    "gaussian-processes",
+    "lstm",
+    "rnn",
+    "gru",
+    "xgboost",
+    "bayesian-inference",
+    "probabilistic-programming",
+    "model-comparison"
+]
+dependencies = [
+    "numpy>=1.21.0",
+    "pandas>=1.3.0", 
+    "scipy>=1.7.0",
+    "scikit-learn>=1.0.0",
+    "matplotlib>=3.5.0",
+]
+
+[project.optional-dependencies]
+deep-learning = [
+    "torch>=1.11.0",
+    "tensorflow>=2.8.0",
+]
+probabilistic = [
+    "pymc3>=3.11.0",
+    "theano-pymc>=1.1.0",
+    "arviz>=0.11.0",
+]
+boosting = [
+    "xgboost>=1.5.0",
+]
+visualization = [
+    "seaborn>=0.11.0",
+    "plotly>=5.0.0",
+]
+statistical = [
+    "statsmodels>=0.13.0",
+]
+dev = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.0.0",
+    "pytest>=6.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "mypy>=0.910",
+]
+docs = [
+    "sphinx>=4.0.0",
+    "sphinx-rtd-theme>=1.0.0",
+]
+all = [
+    "torch>=1.11.0",
+    "tensorflow>=2.8.0",
+    "pymc3>=3.11.0",
+    "theano-pymc>=1.1.0",
+    "arviz>=0.11.0",
+    "xgboost>=1.5.0",
+    "seaborn>=0.11.0",
+    "plotly>=5.0.0",
+    "statsmodels>=0.13.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Javihaus/Advanced-Time-series-analysis"
+Documentation = "https://github.com/Javihaus/Advanced-Time-series-analysis"
+Repository = "https://github.com/Javihaus/Advanced-Time-series-analysis"
+"Bug Tracker" = "https://github.com/Javihaus/Advanced-Time-series-analysis/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --strict-markers --strict-config"
+testpaths = [
+    "tests",
+]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.coverage.run]
+source = ["src"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
